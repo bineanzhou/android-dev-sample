@@ -1,5 +1,6 @@
 package com.nsky.sample
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Looper
 import android.support.design.widget.BottomNavigationView
@@ -41,6 +42,11 @@ class MainActivity : AppCompatActivity() {
 
         this.findViewById<View>(R.id.btn_quit_workthread).setOnClickListener {
             quitWorkThread()
+        }
+
+        this.findViewById<View>(R.id.btn_start_activityb).setOnClickListener{
+            var intent = Intent(this@MainActivity, BActivity::class.java)
+            startActivity(intent)
         }
     }
 

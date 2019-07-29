@@ -29,11 +29,12 @@ public class WorkThread extends Thread {
         //其实就是创建了该线程对用的Looper，Looper里创建MessageQueue来实现消息机制
         //对消息机制不懂得同学可以查阅资料，网上很多也讲的很不错。
         Looper.prepare();
+        Log.d(TAG, "getMainLooper:" + Looper.getMainLooper() + " myLooper:" + Looper.myLooper());
         mHandler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                Log.d(TAG, "getMainLooper:" + Looper.getMainLooper() + " myLooper:" + Looper.myLooper());
+
                 Log.d(TAG, (Looper.getMainLooper() == Looper.myLooper()) + "," + msg.what);
             }
         };

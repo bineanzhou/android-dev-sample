@@ -33,6 +33,13 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_start_workthread"
             android:text="quit WorkThread"/>
 
+    <Button
+            android:id="@+id/btn_start_activityb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btn_quit_workthread"
+            android:text="start activity b"/>
+
     <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigation"
             android:layout_width="0dp"
